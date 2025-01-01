@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Authentication | OTP Verification</title>
+    <meta name="description" content="Secure OTP authentication system with email and mobile number support">
+    <meta name="theme-color" content="#3B82F6">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="auth-card">
+            <!-- Brand Section -->
+            <div class="brand">
+                <div class="brand-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h1>Secure Verification</h1>
+                <p class="brand-description">Please verify your identity to continue</p>
+            </div>
+
+            <!-- Contact Information Form -->
+            <form id="contactForm" class="auth-form" novalidate>
+                <div class="input-group">
+                    <label for="contactType">
+                        <i class="fas fa-user-shield"></i>
+                        Verify Using
+                    </label>
+                    <div class="select-wrapper">
+                        <select id="contactType" aria-label="Select verification method">
+                            <option value="email">Email Address</option>
+                            <option value="mobile">Mobile Number</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="contactInput">
+                        <i class="fas fa-envelope" id="contactTypeIcon"></i>
+                        Contact Details
+                    </label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-envelope" id="contactIcon"></i>
+                        <input type="email" id="contactInput" 
+                               placeholder="Enter your email address"
+                               autocomplete="off"
+                               aria-label="Contact input">
+                    </div>
+                    <small class="error-message" id="contactError" role="alert"></small>
+                </div>
+
+                <button type="submit" class="btn-primary" id="sendOtpBtn">
+                    <div class="button-content">
+                        <span>Send Verification Code</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="button-loader hidden">
+                        <i class="fas fa-circle-notch fa-spin"></i>
+                    </div>
+                </button>
+            </form>
+
+            <!-- OTP Verification Form -->
+            <form id="otpForm" class="auth-form hidden" novalidate>
+                <div class="verification-info">
+                    <i class="fas fa-info-circle"></i>
+                    <div class="verification-text">
+                        <p>Enter the verification code sent to</p>
+                        <strong id="maskedContact"></strong>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>
+                        <i class="fas fa-key"></i>
+                        Verification Code
+                    </label>
+                    <div class="otp-container">
+                        <input type="text" class="otp-input" maxlength="1" aria-label="OTP digit 1" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code">
+                        <input type="text" class="otp-input" maxlength="1" aria-label="OTP digit 2" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code">
+                        <input type="text" class="otp-input" maxlength="1" aria-label="OTP digit 3" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code">
+                        <input type="text" class="otp-input" maxlength="1" aria-label="OTP digit 4" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code">
+                        <input type="text" class="otp-input" maxlength="1" aria-label="OTP digit 5" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code">
+                        <input type="text" class="otp-input" maxlength="1" aria-label="OTP digit 6" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code">
+                    </div>
+                    <small class="error-message" id="otpError" role="alert"></small>
+                </div>
+
+                <div class="timer-container" role="timer">
+                    <i class="fas fa-clock"></i>
+                    <span id="timer">02:00</span>
+                    <button type="button" class="btn-link" id="resendOtp" disabled>
+                        <span>Resend Code</span>
+                        <i class="fas fa-redo"></i>
+                    </button>
+                </div>
+
+                <button type="submit" class="btn-primary" id="verifyOtpBtn">
+                    <div class="button-content">
+                        <span>Verify Code</span>
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <div class="button-loader hidden">
+                        <i class="fas fa-circle-notch fa-spin"></i>
+                    </div>
+                </button>
+            </form>
+
+            <!-- Success Message -->
+            <div id="successMessage" class="success-message hidden" role="alert">
+                <i class="fas fa-check-circle"></i>
+                <h2>Verification Successful!</h2>
+                <p>Your identity has been verified successfully.</p>
+                <button class="btn-primary" onclick="window.location.reload()">
+                    <span>Start New Verification</span>
+                    <i class="fas fa-redo"></i>
+                </button>
+            </div>
+
+            <!-- Security Info -->
+            <div class="security-info">
+                <div class="security-item">
+                    <i class="fas fa-lock"></i>
+                    <span>End-to-end encrypted</span>
+                </div>
+                <div class="security-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Secure verification</span>
+                </div>
+                <div class="security-item">
+                    <i class="fas fa-user-shield"></i>
+                    <span>Privacy protected</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
