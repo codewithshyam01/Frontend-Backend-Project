@@ -13,12 +13,11 @@ Usage
 Contributing
 
 License
-
-
+<hr>
 About
 
 The Frontend-Backend-Project repository contains multiple projects that demonstrate the integration of frontend and backend components. Each project is designed to highlight specific features or functionalities in web development.
-
+<hr>
 Projects
 
 Here are some of the projects included in this repository:
@@ -29,7 +28,7 @@ User Authentication Module: A standalone module focusing on user registration, l
 
 
 Each project is organized in its respective directory within the repository. You can navigate to these directories to access the source code and related assets.
-
+<hr>
 Usage
 
 Feel free to explore and use these projects for your personal learning and development. If you decide to use or modify any part of these projects, please adhere to the following guidelines:
@@ -44,11 +43,11 @@ DO NOT try to profit from free content: These projects are shared freely for edu
 
 
 If any unauthorized use is discovered, appropriate action will be taken to prevent it.
-
+<hr>
 Contributing
 
 While this repository is primarily a personal collection, contributions are welcome. If you have suggestions, improvements, or new projects that align with the spirit of this collection, feel free to open an issue or submit a pull request.
-
+<hr>
 License
 
 This repository is licensed under the BSL-1.0 License. For more details, please refer to the LICENSE file.
