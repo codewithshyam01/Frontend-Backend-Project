@@ -1,7 +1,22 @@
-# Frontend-Backend-Project
 Frontend-Backend-Project
 
-Welcome to the Frontend-Backend-Project repository! This project is a collection of various web development projects that integrate both frontend and backend technologies.
+Welcome to the Frontend-Backend-Project repository! This project is a collection of various web development projects that integrate both frontend and backend technologies. It serves as a learning resource and a showcase of different implementations.
+
+Table of Contents
+
+About
+
+Projects
+
+Usage
+
+Contributing
+
+License
+
+
+About
+
 The Frontend-Backend-Project repository contains multiple projects that demonstrate the integration of frontend and backend components. Each project is designed to highlight specific features or functionalities in web development.
 
 Projects
@@ -33,6 +48,11 @@ If any unauthorized use is discovered, appropriate action will be taken to preve
 Contributing
 
 While this repository is primarily a personal collection, contributions are welcome. If you have suggestions, improvements, or new projects that align with the spirit of this collection, feel free to open an issue or submit a pull request.
+
+License
+
+This repository is licensed under the BSL-1.0 License. For more details, please refer to the LICENSE file.
+
 
 ---
 
