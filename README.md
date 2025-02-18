@@ -26,7 +26,9 @@ E-commerce Application: A comprehensive e-commerce platform with features like p
 
 User Authentication Module: A standalone module focusing on user registration, login, and authentication mechanisms.
 
-Calculator-App: A responsive standard calculator which lots of features. 
+Calculator-App: A responsive standard calculator which lots of features.
+
+Sun Orbit Animation: A simple CSS animation of an object orbiting around the sun, showcasing orbital motion using keyframes and transforms.
 
 Each project is organized in its respective directory within the repository. You can navigate to these directories to access the source code and related assets.
 <hr>
