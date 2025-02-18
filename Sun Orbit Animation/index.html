@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sun Orbit</title>
+    <style>
+        .container {
+            width: 600px;
+            height: 600px;
+            margin: 50px auto;
+            position: relative;
+            background: black;
+            border-radius: 50%;
+        }
+
+        .sun {
+            width: 80px;
+            height: 80px;
+            background: #ffff00;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .box {
+            width: 30px;
+            height: 30px;
+            background: #FF0000;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -15px;
+            margin-left: -15px;
+            animation: orbit 8s linear infinite;
+        }
+
+        @keyframes orbit {
+            from {
+                transform: rotate(0deg) translate(200px) rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg) translate(200px) rotate(-360deg);
+            }
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        footer strong {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sun"></div>
+        <div class="box"></div>
+    </div>
+    <footer>
+        <strong>Made by CodeWithShyam01</strong>
+    </footer>
+</body>
+
+</html>
