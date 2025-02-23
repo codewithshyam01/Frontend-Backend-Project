@@ -1,0 +1,46 @@
+body {
+    background: #111;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+.container {
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+}
+svg {
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.3s ease-in-out;
+}
+svg:hover {
+    transform: scale(1.1);
+}
+path {
+    animation: draw 10s ease-in-out forwards;
+    transition: stroke-dashoffset 1s ease-in-out;
+}
+@keyframes draw {
+    from {
+        stroke-dashoffset: 600;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+.text {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: red;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+.container:hover .text {
+    opacity: 1;
+}
